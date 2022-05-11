@@ -23,7 +23,8 @@ common_sources = \
     CircuitBreakerHealthPolicy.cpp \
     CircuitBreakerOpenState.cpp \
     CircuitBreakerState.cpp \
-    TimeService.cpp
+    TimeService.cpp \
+    MockHealthPolicy.cpp
 
 
 noisecirkuit_SOURCES = main.cpp $(common_sources)
