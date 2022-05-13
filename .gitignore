@@ -28,6 +28,7 @@
 *.out
 *.app
 noisecirkuit
+example
 
 # Ignore the build and lib dirs
 build/*

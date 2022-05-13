@@ -32,24 +32,4 @@ git clean -xdf
 
 ### Use Library
 If everything installed fine then pass `-lnoisecirkuit` parameter in linker, when build your application.
-Then use it in your app like this:
-
-```c++
-#include <iostream>
-
-#include <noisecirkuit/MockHealthPolicy.h>
-#include <noisecirkuit/CircuitBreaker.h>
-
-using namespace std;
-
-int main(int argc, char* argv[])
-{
-    cout << "Testing NoiseCirkuit" << endl;
-    
-    NoiseCirkuit::MockHealthPolicy health(false);
-    NoiseCirkuit::CircuitBreaker cb(&health);
-    cb.initialize();
-
-    cout << "Testing NoiseCirkuit, request is allowed: " << cb.isRequestAllowed() << endl;
-}
-```
+Then use it in your app like in `example/`.
