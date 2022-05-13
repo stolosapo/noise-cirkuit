@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "CircuitBreaker.h"
-#include "MockHealthPolicy.cpp"
+#include "MockHealthPolicy.h"
 #include "TimeService.h"
 
 using namespace std;

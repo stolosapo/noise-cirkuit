@@ -1,31 +1,19 @@
-#ifndef MockHealthPolicy_h__
-#define MockHealthPolicy_h__
+#include "MockHealthPolicy.h"
 
-#include "CircuitBreakerHealthPolicy.h"
+using namespace NoiseCirkuit;
 
-namespace NoiseCirkuit
+MockHealthPolicy::MockHealthPolicy(bool healthy)
+    : CircuitBreakerHealthPolicy(), healthy(healthy)
 {
-    class MockHealthPolicy: public CircuitBreakerHealthPolicy
-    {
-    private:
-        bool healthy;
 
-    public:
-        MockHealthPolicy(bool healthy): CircuitBreakerHealthPolicy(), healthy(healthy)
-        {
-
-        }
-
-        virtual ~MockHealthPolicy()
-        {
-
-        }
-
-        virtual bool isHealthy()
-        {
-            return this->healthy;
-        }
-    };
 }
 
-#endif // MockHealthPolicy_h__
+MockHealthPolicy::~MockHealthPolicy()
+{
+
+}
+
+bool MockHealthPolicy::isHealthy()
+{
+    return this->healthy;
+}

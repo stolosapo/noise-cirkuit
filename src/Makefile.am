@@ -13,7 +13,8 @@ maininclude_HEADERS = \
     CircuitBreakerHealthPolicy.h \
     CircuitBreakerOpenState.h \
     CircuitBreakerState.h \
-    CircuitBreakerStatus.h
+    CircuitBreakerStatus.h \
+    MockHealthPolicy.h
 
 
 common_sources = \
