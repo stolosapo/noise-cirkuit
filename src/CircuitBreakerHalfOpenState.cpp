@@ -5,8 +5,6 @@
 
 using namespace NoiseCirkuit;
 
-const double CircuitBreakerHalfOpenState::chance = 0.02;
-
 CircuitBreakerHalfOpenState::CircuitBreakerHalfOpenState(CircuitBreaker* cb)
     : CircuitBreakerState(cb, HALFOPEN)
 {
@@ -22,7 +20,7 @@ bool CircuitBreakerHalfOpenState::isRequestAllowed()
 {
     if (!cb->policy->isHealthy())
     {
-        return (double) rand() <= chance;
+        return (double) rand() <= cb->policy->halfOpenStatePassChance();
     }
 
     /* Change state to CLOSED */

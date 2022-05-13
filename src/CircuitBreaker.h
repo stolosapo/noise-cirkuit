@@ -21,17 +21,22 @@ namespace NoiseCirkuit
 
     class CircuitBreakerHealthPolicy
     {
+    private:
+        static const double DEFAULT_HALFOPENSTATE_PASS_CHANCE;
+        static const int DEFAULT_OPENSTATE_TIMEOUT_SEC;
+
     public:
         CircuitBreakerHealthPolicy();
         virtual ~CircuitBreakerHealthPolicy();
 
         virtual bool isHealthy() = 0;
+        virtual double halfOpenStatePassChance();
+        virtual int openStateTimeoutSeconds();
     };
 
     class CircuitBreakerState
     {
     private:
-
         CircuitBreakerStatus status;
 
     protected:
@@ -41,9 +46,8 @@ namespace NoiseCirkuit
         CircuitBreakerState(CircuitBreaker* cb, CircuitBreakerStatus status);
         virtual ~CircuitBreakerState();
 
-        CircuitBreakerStatus getStatus();
-
         virtual bool isRequestAllowed() = 0;
+        CircuitBreakerStatus getStatus();
     };
 
     class CircuitBreakerClosedState : public CircuitBreakerState
@@ -57,9 +61,6 @@ namespace NoiseCirkuit
 
     class CircuitBreakerHalfOpenState : public CircuitBreakerState
     {
-    private:
-        static const double chance;
-
     public:
         CircuitBreakerHalfOpenState(CircuitBreaker* cb);
         virtual ~CircuitBreakerHalfOpenState();
@@ -70,8 +71,6 @@ namespace NoiseCirkuit
     class CircuitBreakerOpenState : public CircuitBreakerState
     {
     private:
-        static const int openStateTimeoutSec = 3;
-
         time_t exitTime;
 
     public:
