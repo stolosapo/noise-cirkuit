@@ -1,11 +1,10 @@
-#include "CircuitBreakerOpenState.h"
 #include "CircuitBreaker.h"
 #include "TimeService.h"
 
 using namespace NoiseCirkuit;
 
 CircuitBreakerOpenState::CircuitBreakerOpenState(CircuitBreaker* cb)
-    : CircuitBreakerState(cb, CB_OPEN)
+    : CircuitBreakerState(cb, OPEN)
 {
     exitTime = timeRawNow() + openStateTimeoutSec;
 }

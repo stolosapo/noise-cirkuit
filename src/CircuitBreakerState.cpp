@@ -1,4 +1,4 @@
-#include "CircuitBreakerState.h"
+#include "CircuitBreaker.h"
 
 using namespace NoiseCirkuit;
 

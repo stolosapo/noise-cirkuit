@@ -1,6 +1,5 @@
 #include <iostream>
 
-#include <noisecirkuit/CircuitBreakerHealthPolicy.h>
 #include <noisecirkuit/CircuitBreaker.h>
 
 using namespace std;
@@ -34,5 +33,5 @@ int main(int argc, char* argv[])
     NoiseCirkuit::CircuitBreaker cb(&health);
     cb.initialize();
 
-    cout << "Testing NoiseCirkuit, request is allowed: " << cb.isRequestAllowed() << endl;
+    cout << "Request is allowed: " << cb.isRequestAllowed() << endl;
 }

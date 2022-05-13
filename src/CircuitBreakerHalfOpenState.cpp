@@ -1,4 +1,3 @@
-#include "CircuitBreakerHalfOpenState.h"
 #include "CircuitBreaker.h"
 
 #include <stdio.h>
@@ -9,7 +8,7 @@ using namespace NoiseCirkuit;
 const double CircuitBreakerHalfOpenState::chance = 0.02;
 
 CircuitBreakerHalfOpenState::CircuitBreakerHalfOpenState(CircuitBreaker* cb)
-    : CircuitBreakerState(cb, CB_HALFOPEN)
+    : CircuitBreakerState(cb, HALFOPEN)
 {
 
 }

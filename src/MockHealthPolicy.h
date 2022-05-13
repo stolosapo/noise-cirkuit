@@ -1,7 +1,7 @@
 #ifndef MockHealthPolicy_h__
 #define MockHealthPolicy_h__
 
-#include "CircuitBreakerHealthPolicy.h"
+#include "CircuitBreaker.h"
 
 namespace NoiseCirkuit
 {

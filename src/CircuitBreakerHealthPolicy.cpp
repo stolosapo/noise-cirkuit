@@ -1,4 +1,4 @@
-#include "CircuitBreakerHealthPolicy.h"
+#include "CircuitBreaker.h"
 
 using namespace NoiseCirkuit;
 

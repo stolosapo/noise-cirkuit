@@ -1,10 +1,9 @@
-#include "CircuitBreakerClosedState.h"
 #include "CircuitBreaker.h"
 
 using namespace NoiseCirkuit;
 
 CircuitBreakerClosedState::CircuitBreakerClosedState(CircuitBreaker* cb)
-    : CircuitBreakerState(cb, CB_CLOSED)
+    : CircuitBreakerState(cb, CLOSED)
 {
 
 }

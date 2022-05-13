@@ -6,14 +6,7 @@ bin_PROGRAMS = noisecirkuit
 
 mainincludedir = $(includedir)/noisecirkuit
 maininclude_HEADERS = \
-    CircuitBreaker_t.h \
     CircuitBreaker.h \
-    CircuitBreakerClosedState.h \
-    CircuitBreakerHalfOpenState.h \
-    CircuitBreakerHealthPolicy.h \
-    CircuitBreakerOpenState.h \
-    CircuitBreakerState.h \
-    CircuitBreakerStatus.h \
     MockHealthPolicy.h
 
 
