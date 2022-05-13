@@ -101,6 +101,7 @@ namespace NoiseCirkuit
 
         void initialize();
         bool isRequestAllowed();
+        CircuitBreakerStatus getStatus();
     };
 }
 

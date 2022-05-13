@@ -13,7 +13,7 @@ CircuitBreaker::CircuitBreaker(CircuitBreakerHealthPolicy* policy)
     state = NULL;
 
     /* initialize random seed: */
-      srand(time(NULL));
+    srand(time(NULL));
 }
 
 CircuitBreaker::~CircuitBreaker()
@@ -53,4 +53,9 @@ bool CircuitBreaker::isRequestAllowed()
     }
 
     return state->isRequestAllowed();
+}
+
+CircuitBreakerStatus CircuitBreaker::getStatus()
+{
+    return state->getStatus();
 }
