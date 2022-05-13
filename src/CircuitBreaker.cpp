@@ -57,5 +57,10 @@ bool CircuitBreaker::isRequestAllowed()
 
 CircuitBreakerStatus CircuitBreaker::getStatus()
 {
+    if (state == NULL)
+    {
+        return NONE;
+    }
+
     return state->getStatus();
 }
