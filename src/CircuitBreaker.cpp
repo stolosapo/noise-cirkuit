@@ -28,7 +28,7 @@ CircuitBreaker::~CircuitBreaker()
 
 void CircuitBreaker::initialize()
 {
-    state = new CircuitBreakerClosedState(this);
+    changeState(new CircuitBreakerClosedState(this));
 }
 
 void CircuitBreaker::changeState(CircuitBreakerState* newState)
