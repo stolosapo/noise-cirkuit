@@ -3,6 +3,7 @@
 
 #include <noisetest/UnitTestSuite.h>
 
+void test_circuitbreaker_should_none_state();
 void test_circuitbreaker_should_init_correct();
 
 class CircuitBreakerTest: public NoiseTest::UnitTestSuite
