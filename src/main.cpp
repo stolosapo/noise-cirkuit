@@ -2,7 +2,6 @@
 
 #include "CircuitBreaker.h"
 #include "MockHealthPolicy.h"
-#include "TimeService.h"
 
 using namespace std;
 using namespace NoiseCirkuit;

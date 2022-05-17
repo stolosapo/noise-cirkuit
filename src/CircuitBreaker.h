@@ -6,6 +6,8 @@
 
 namespace NoiseCirkuit
 {
+    time_t timeRawNow();
+
     class CircuitBreaker;
 
     enum CircuitBreakerStatus

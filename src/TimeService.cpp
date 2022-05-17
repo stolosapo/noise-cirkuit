@@ -1,6 +1,6 @@
-#include "TimeService.h"
+#include "CircuitBreaker.h"
 
-time_t timeRawNow()
+time_t NoiseCirkuit::timeRawNow()
 {
 	return time(0);
 }
