@@ -7,8 +7,8 @@ common_sources = \
     MainTestSuite.h MainTestSuite.cpp \
     CircuitBreakerTest.h CircuitBreakerTest.cpp
 
-noisecirkuittester_SOURCES = main.cpp $(common_sources)
-noisecirkuittester_CXXFLAGS = $(AM_CXXFLAGS) -lnoisetest
+noisecirkuittester_SOURCES = main.cpp
+noisecirkuittester_CXXFLAGS = $(AM_CXXFLAGS)
 
 TESTS = noisecirkuittester
 
