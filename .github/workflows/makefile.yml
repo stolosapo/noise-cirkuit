@@ -22,6 +22,7 @@ jobs:
         ./configure
         make
         sudo make install
+        sudo ldconfig /usr/local/lib
 
     - name: autogen
       run: ./autogen.sh
