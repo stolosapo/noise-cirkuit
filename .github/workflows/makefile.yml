@@ -35,5 +35,11 @@ jobs:
     - name: Run check
       run: make check
 
+    - name: Archive Test results
+      uses: actions/upload-artifact@v3
+        with:
+          name: tes-suit-logs
+          path: tests/test-suite.log
+
     - name: Run distcheck
       run: make distcheck
