@@ -41,5 +41,10 @@ jobs:
         name: tes-suit-logs
         path: tests/test-suite.log
 
+    - name: Download Test results
+      uses: actions/download-artifact@v3
+      with:
+        name: tes-suit-logs
+
     - name: Run distcheck
       run: make distcheck
