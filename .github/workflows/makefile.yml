@@ -13,18 +13,27 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+
+    - name: Install NoiseTest library
+      run: |
+        wget https://github.com/stolosapo/noise-test/releases/download/v1.0.0/noisetest-1.0.0.tar.gz
+        tar -zxvf noisetest-1.0.0.tar.gz
+        cd noisetest-1.0.0
+        ./configute
+        make
+        sudo make install
+
     - name: autogen
       run: ./autogen.sh
-    
+
     - name: configure
       run: ./configure
-      
+
     - name: Install dependencies
       run: make
-      
+
     - name: Run check
       run: make check
-      
+
     - name: Run distcheck
       run: make distcheck
