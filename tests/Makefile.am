@@ -5,7 +5,15 @@ bin_PROGRAMS = noisecirkuittester
 
 common_sources = \
     MainTestSuite.h MainTestSuite.cpp \
-    CircuitBreakerTest.h CircuitBreakerTest.cpp
+    CircuitBreakerTest.h CircuitBreakerTest.cpp \
+    ../src/CircuitBreaker.h ../src/CircuitBreaker.cpp \
+    ../src/CircuitBreakerClosedState.cpp \
+    ../src/CircuitBreakerHalfOpenState.cpp \
+    ../src/CircuitBreakerHealthPolicy.cpp \
+    ../src/CircuitBreakerOpenState.cpp \
+    ../src/CircuitBreakerState.cpp \
+    ../src/TimeService.cpp \
+    ../src/MockHealthPolicy.h ../src/MockHealthPolicy.cpp
 
 noisecirkuittester_SOURCES = main.cpp $(common_sources)
 noisecirkuittester_CXXFLAGS = $(AM_CXXFLAGS) -lnoisetest
