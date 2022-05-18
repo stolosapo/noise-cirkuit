@@ -19,7 +19,7 @@ jobs:
         wget https://github.com/stolosapo/noise-test/releases/download/v1.0.0/noisetest-1.0.0.tar.gz
         tar -zxvf noisetest-1.0.0.tar.gz
         cd noisetest-1.0.0
-        ./configute
+        ./configure
         make
         sudo make install
 
