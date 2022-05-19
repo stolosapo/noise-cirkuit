@@ -5,6 +5,8 @@
 
 void test_circuitbreaker_should_none_state();
 void test_circuitbreaker_should_init_correct();
+void test_circuitbreaker_should_allowed_request_when_initialized();
+void test_circuitbreaker_should_notallowed_request_when_notinitialized();
 
 class CircuitBreakerTest: public NoiseTest::UnitTestSuite
 {
