@@ -25,7 +25,7 @@ void CircuitBreakerTest::registerTests()
 
 void test_circuitbreaker_should_none_state()
 {
-    NoiseCirkuit::MockHealthPolicy mockPolicy(true);
+    NoiseCirkuit::MockHealthPolicy mockPolicy(true, 0.02, 3);
     NoiseCirkuit::CircuitBreaker cb(&mockPolicy);
 
     assertEqual(NoiseCirkuit::NONE, cb.getStatus());
@@ -33,7 +33,7 @@ void test_circuitbreaker_should_none_state()
 
 void test_circuitbreaker_should_init_correct()
 {
-    NoiseCirkuit::MockHealthPolicy mockPolicy(true);
+    NoiseCirkuit::MockHealthPolicy mockPolicy(true, 0.02, 3);
     NoiseCirkuit::CircuitBreaker cb(&mockPolicy);
     cb.initialize();
 
@@ -42,7 +42,7 @@ void test_circuitbreaker_should_init_correct()
 
 void test_circuitbreaker_should_allowed_request_when_initialized()
 {
-    NoiseCirkuit::MockHealthPolicy mockPolicy(true);
+    NoiseCirkuit::MockHealthPolicy mockPolicy(true, 0.02, 3);
     NoiseCirkuit::CircuitBreaker cb(&mockPolicy);
     cb.initialize();
 
@@ -51,7 +51,7 @@ void test_circuitbreaker_should_allowed_request_when_initialized()
 
 void test_circuitbreaker_should_notallowed_request_when_notinitialized()
 {
-    NoiseCirkuit::MockHealthPolicy mockPolicy(true);
+    NoiseCirkuit::MockHealthPolicy mockPolicy(true, 0.02, 3);
     NoiseCirkuit::CircuitBreaker cb(&mockPolicy);
 
     assertFalse(cb.isRequestAllowed());

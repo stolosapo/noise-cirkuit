@@ -9,11 +9,17 @@ namespace NoiseCirkuit
     {
     private:
         bool healthy;
+        double _halfOpenStatePassChance;
+        int _openStateTimeoutSeconds;
 
     public:
         MockHealthPolicy(bool healthy);
+        MockHealthPolicy(bool healthy, double halfOpenStatePassChance, int openStateTimeoutSeconds);
         virtual ~MockHealthPolicy();
         virtual bool isHealthy();
+        void setHealthy(bool healthy);
+        virtual double halfOpenStatePassChance();
+        virtual int openStateTimeoutSeconds();
     };
 }
 

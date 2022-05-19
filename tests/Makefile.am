@@ -6,6 +6,9 @@ bin_PROGRAMS = noisecirkuittester
 common_sources = \
     MainTestSuite.h MainTestSuite.cpp \
     CircuitBreakerTest.h CircuitBreakerTest.cpp \
+    CircuitBreakerClosedStateTest.h CircuitBreakerClosedStateTest.cpp \
+    CircuitBreakerOpenStateTest.h CircuitBreakerOpenStateTest.cpp \
+    CircuitBreakerHalfOpenStateTest.h CircuitBreakerHalfOpenStateTest.cpp \
     ../src/CircuitBreaker.h ../src/CircuitBreaker.cpp \
     ../src/CircuitBreakerClosedState.cpp \
     ../src/CircuitBreakerHalfOpenState.cpp \
