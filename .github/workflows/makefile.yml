@@ -39,13 +39,17 @@ jobs:
     - name: Archive Test results
       uses: actions/upload-artifact@v3
       with:
-        name: tes-suit-logs
-        path: tests/test-suite.log
+        name: test-suit-logs
+        path: |
+            tests/noisecirkuittester.log
+            tests/noisecirkuittester.trs
+            tests/test-suite.log
+
 
     - name: Download Test results
       uses: actions/download-artifact@v3
       with:
-        name: tes-suit-logs
+        name: test-suit-logs
 
     - name: Run distcheck
       run: make distcheck
