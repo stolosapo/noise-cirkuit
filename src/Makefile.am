@@ -26,6 +26,6 @@ noisecirkuit_LDADD = libnoisecirkuit.la
 noisecirkuit_CXXFLAGS = $(AM_CXXFLAGS)
 
 lib_LTLIBRARIES = libnoisecirkuit.la
-libnoisecirkuit_la_LDFLAGS = -version-info 1:0:1 -pthread
+libnoisecirkuit_la_LDFLAGS = -version-info 1:0:2 -pthread
 libnoisecirkuit_la_CXXFLAGS = $(AM_CXXFLAGS) -pthread
 libnoisecirkuit_la_SOURCES = $(common_sources)
