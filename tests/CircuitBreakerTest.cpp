@@ -1,7 +1,7 @@
 #include "CircuitBreakerTest.h"
 #include <noisetest/Assertion.h>
-#include "CircuitBreaker.h"
-#include "MockHealthPolicy.h"
+#include "../src/CircuitBreaker.h"
+#include "../src/MockHealthPolicy.h"
 
 using namespace NoiseTest;
 
