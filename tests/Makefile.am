@@ -22,4 +22,3 @@ noisecirkuittester_SOURCES = main.cpp $(common_sources)
 noisecirkuittester_CXXFLAGS = $(AM_CXXFLAGS) -lnoisetest
 
 TESTS = noisecirkuittester
-
