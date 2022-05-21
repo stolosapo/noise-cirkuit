@@ -40,9 +40,9 @@ jobs:
       with:
         name: test-suit-logs
         path: |
-            tests/noisecirkuittester.log
-            tests/noisecirkuittester.trs
-            tests/test-suite.log
+            src/noisecirkuit.log
+            src/noisecirkuit.trs
+            src/test-suite.log
 
     - name: Download Test results
       uses: actions/download-artifact@v3
