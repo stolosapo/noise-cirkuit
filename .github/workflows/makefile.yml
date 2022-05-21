@@ -35,6 +35,11 @@ jobs:
     - name: Run check
       run: make check
 
+    - name: Run tests
+      run: |
+        cd tests
+        ./tester.sh > test_results.log
+
     - name: Archive Test results
       uses: actions/upload-artifact@v3
       with:
@@ -43,6 +48,7 @@ jobs:
             src/noisecirkuit.log
             src/noisecirkuit.trs
             src/test-suite.log
+            tests/test_results.log
 
     - name: Download Test results
       uses: actions/download-artifact@v3
