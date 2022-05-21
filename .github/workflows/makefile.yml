@@ -57,3 +57,17 @@ jobs:
 
     - name: Run distcheck
       run: make distcheck
+
+    - name: Run dist
+      run: make dist
+
+    - name: Archive dist
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist
+        path: noisecirkuit-*.tar.gz
+
+    - name: Download dist
+      uses: actions/download-artifact@v3
+      with:
+        name: dist
