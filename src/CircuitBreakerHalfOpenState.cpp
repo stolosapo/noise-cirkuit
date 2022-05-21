@@ -20,7 +20,9 @@ bool CircuitBreakerHalfOpenState::isRequestAllowed()
 {
     if (!cb->policy->isHealthy())
     {
-        return (double) rand() <= cb->policy->halfOpenStatePassChance();
+        /* random 0 - 1 */
+        double chance = (double) rand() / RAND_MAX;
+        return chance <= cb->policy->halfOpenStatePassChance();
     }
 
     /* Change state to CLOSED */

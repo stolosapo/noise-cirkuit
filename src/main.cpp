@@ -9,7 +9,7 @@ using namespace NoiseCirkuit;
 int main(int argc, char* argv[])
 {
     // Create first a Health Policy instance
-    MockHealthPolicy healthy(true);
+    MockHealthPolicy healthy(true, 0.02, 3);
 
     // Create a new CircuitBreaker that checks this policy
     CircuitBreaker cb(&healthy);

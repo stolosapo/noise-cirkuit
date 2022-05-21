@@ -28,6 +28,7 @@
 *.out
 *.app
 noisecirkuit
+tester
 example
 
 # Ignore the build and lib dirs
