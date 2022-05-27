@@ -1,0 +1,6 @@
+noisecirkuit
+------------
+
+A simple C++ library that implements the Circuit Breaker pattern.
+
+See in folder /examples for usage example, and in folder /tests as well.
